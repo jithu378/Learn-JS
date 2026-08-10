@@ -4,7 +4,7 @@ let arr = [1,2,3,4,5,6,7,8,9];
 let start = 1;
 let end = 10;
 let sum = 0;
-let missing = 0;
+let missing;
 for(let i=start; i <= end; i++){
     sum += i;
 }

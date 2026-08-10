@@ -24,3 +24,4 @@ for(let i = 0; low <= high; i++){
         high = mid - 1;
     }
 }
+
