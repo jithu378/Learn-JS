@@ -68,3 +68,8 @@ for(let key in games){
 console.log("");
 
 // 8.Find how many properties an object contains
+let count = 0;
+for(let key in games){
+    count++;
+}
+console.log(`count of properties in the object 'game' is ${count}`);
