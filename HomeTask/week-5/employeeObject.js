@@ -1,6 +1,6 @@
 let employee = {
     name : "Jithu Biju",
-    salary : 38000,
+    salary : 40000,
 
     increment : function(percent){
         let salaryIncrement = (percent / 100) * this.salary;
