@@ -35,7 +35,7 @@ class Vehicle{
     }
 
     displayInfo(){
-        console.log(`Make : ${this.make}, Model : ${this.model}, Manufacture Year : ${year}, colour : ${color}`)
+        console.log(`Make : ${this.make}, Model : ${this.model}, Manufacture Year : ${this.year}, colour : ${this.color}`)
     }
 }
 
@@ -59,14 +59,13 @@ class Car extends Vehicle{
 }
 
 class Motorcycle extends Vehicle{
-    constructor(hasSideCar){
+    constructor(){
         super();
-        this.hasSideCar = hasSideCar;
+        this.hasSideCar = "No";
     }
 
     displayInfo(){
-        this.displayInfo()
-        this.hasSideCar = this.hasSideCar;
+        this.hasSideCar = "Yes";
     }
 
     wheelie(){
@@ -74,4 +73,5 @@ class Motorcycle extends Vehicle{
     }
 }
 
-let obj1 = new Motorcycle("BMW","M3",2014,"Black")
+let obj1 = new Car("BMW","M3",2014,"Black")
+obj1.displayInfo();
