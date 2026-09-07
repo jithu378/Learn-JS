@@ -20,6 +20,7 @@ class BankAccount{
 
     deposit(amount){
         this.balance += amount;
+        console.log(`Amount deposited : ${amount}`);
     }
 
     withdraw(amount){
@@ -27,31 +28,33 @@ class BankAccount{
             console.log("Insufficient balance");
         } else {
             this.balance -= amount;
+            console.log(`Amount withdrawed : ${amount}`);
         }
     }
 
     getBalance(){
-        console.log(this.balance);
+        console.log(`${this.holderName}'s Balance : ${this.balance}`);
     }
 
     transfer(toAccount, amount){
         if(amount <= this.balance){
             this.balance -= amount;
             toAccount.balance += amount;
+            console.log(`Amount : ${amount}, transfered to ${toAccount.holderName} - Account number : ${toAccount.accountNumber}`);
         } else {
             console.log("Insufficient balance to transfer");
         }
     }
 }
 
-let account1 = new BankAccount("A101", "Jithu", 1000);
-let account2 = new BankAccount("A102", "Prabin", 500);
+let account1 = new BankAccount("AC01", "Jithu", 108700);
+let account2 = new BankAccount("AC02", "Prabin", 59901);
 
-account1.deposit(200);
-
-console.log("Jithu:", account1.getBalance());
-
-account1.transfer(account2, 300);
-
-console.log("Jithu:", account1.getBalance());
-console.log("Jane:", account2.getBalance());
+account1.getBalance();
+account1.deposit(10000);
+account1.getBalance();
+account1.withdraw(5000);
+account1.getBalance();
+account1.transfer(account2,1000);
+account1.getBalance();
+account2.getBalance();
