@@ -1,14 +1,20 @@
-class Test{
-    constructor(name,mark){
+class Animal{
+    constructor(name,color){
         this.name = name;
-        this.mark = mark;
+        this.color = color;
     }
 
-    improve(impMark){
-        this.mark += impMark;
-        console.log(this.mark);
+    walk(){
+        console.log("Walking.....");
     }
 }
 
-let obj = new Test("jb",78);
-obj.improve(10);
+class Dog extends Animal{
+    constructor(sound){ 
+        this.sound = sound
+    }
+
+    sound(){
+        console.log(`Dog is ${this.sound}`);
+    }
+}

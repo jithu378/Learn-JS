@@ -11,7 +11,7 @@
 //  3. Transferring money to second account
 //  4. Displaying both balances
 
-class Bank{
+class BankAccount{
     constructor(accountNumber, holderName, balance){
         this.accountNumber = accountNumber;
         this.holderName = holderName;
@@ -23,15 +23,35 @@ class Bank{
     }
 
     withdraw(amount){
-        this.balance -= amount;
+        if(this.balance <= 0){
+            console.log("Insufficient balance");
+        } else {
+            this.balance -= amount;
+        }
     }
 
     getBalance(){
         console.log(this.balance);
     }
+
+    transfer(toAccount, amount){
+        if(amount <= this.balance){
+            this.balance -= amount;
+            toAccount.balance += amount;
+        } else {
+            console.log("Insufficient balance to transfer");
+        }
+    }
 }
 
-let obj1 = new Bank(12345, "jb" ,109000);
-obj1.withdraw(1000);
-obj1.deposit(5000);
-obj1.getBalance();
+let account1 = new BankAccount("A101", "Jithu", 1000);
+let account2 = new BankAccount("A102", "Prabin", 500);
+
+account1.deposit(200);
+
+console.log("Jithu:", account1.getBalance());
+
+account1.transfer(account2, 300);
+
+console.log("Jithu:", account1.getBalance());
+console.log("Jane:", account2.getBalance());
