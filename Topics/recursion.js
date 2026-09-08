@@ -17,12 +17,23 @@
 // }
 // console.log(fact(5));
 
-function count(n){
-    if(n == 0){
-        return;
-    }
-    count(n-1);
-    console.log(n);
-}
-count(5);
-console.log("Count stopped.........");
+// function count(n){
+//     if(n == 0){
+//         return;
+//     }
+//     count(n-1);
+//     console.log(n);
+// }
+// count(5);
+// console.log("Count stopped.........");
+
+// sum of n numbers
+// function sum(n){
+//     if(n == 0){
+//         return 0;
+//     }
+//     return n + sum(n-1)
+// }
+// console.log(sum(5));
+
+// sum of digits eg: 123 = 6 that is 1+2+3

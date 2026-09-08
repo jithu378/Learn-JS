@@ -6,7 +6,7 @@ let arr = [23,5,89,0,10,11,3];
 arr.push(68);
 console.log(arr);
 
-//2. pop() - delete the last element of the array
+//2. pop() - remove the last element of the array
 arr.pop(68);
 console.log(arr);
 
@@ -14,7 +14,7 @@ console.log(arr);
 arr.unshift(68);
 console.log(arr);
 
-//4. shift() - insert new element at the starting of the array
+//4. shift() - remove first element of the array
 arr.shift(68);
 console.log(arr);
  
