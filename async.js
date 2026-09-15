@@ -44,3 +44,26 @@ function verifyOTP(opt){
 }
 
 sendOTP(9876543210,verifyOTP);
+
+
+// 3. Email Sending System
+
+//    Imagine a registration system.
+
+//    After a user registers, the application needs to send a welcome email.
+
+//    Create: registerUser(username, callback)
+
+//    Registration should take 2 seconds.
+
+//    After successful registration, call: sendWelcomeEmail(username)
+
+//    While registration is happening:
+
+//    Creating your account...
+
+//    After registration:
+
+//      Account created successfully!
+//      Sending welcome email...
+//      Welcome email sent!
